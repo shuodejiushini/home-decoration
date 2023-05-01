@@ -1,0 +1,42 @@
+@charset "utf-8";
+// 浏览器兼容
+// 使用方法 .pre (transition, all .3s);
+
+.pre (@style, @value) {
+	-webkit-@{style}: @value;
+	-moz-@{style}: @value;
+	-ms-@{style}: @value;
+	@{style}: @value;
+}
+
+
+// 11像素以下字体
+// .font-under-12(11) 缩放以后是居中的
+// .font-under-12-left(11) 缩放以后左对齐
+.font-under-12(@size){
+	font-size: 12px;
+	transform: scale(@size/12, @size/12);
+}
+.font-under-12-left(@size){
+	font-size: 12px;
+	transform: scale(@size/12, @size/12);
+	-webkit-transform-origin-x: 0;
+}
+
+
+// 正方形 长宽相等
+.fun-square(@size){
+	width: @size;
+	height: @size;
+}
+
+.fun-hollow-text(@size, @color){
+	-webkit-text-stroke: @size @color;
+	color: transparent;
+}
+
+
+.fun-hollow-text-destroy(@color){
+	-webkit-text-stroke: 0;
+	color: @color;
+}

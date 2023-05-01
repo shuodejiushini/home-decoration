@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+// 组件
+@import "common/fonts.less";
+@import "common/icon.less";
+@import "common/input.less";
+@import "common/variables.less";
+
+// 公共方法
+@import "common/utilities.less";
+@import "common/btn.less";
+// 公共样式
+
+@import "common/header.less";
+@import "common/footer.less";
+
+// 初始化样式
+	// 初始化样式
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html,
+	body {
+		font-family: @fonts-common-suffix;
+		color: #333;
+		font-size: 12px;
+		letter-spacing: 0px;
+		width: 100%;
+		min-height: 100%;
+	}
+	p{
+		margin: 0;
+	}
+	ul,ol {
+		list-style: none;
+	}
+	div,p,span,i,ul,li,dl,dt,dd {
+		word-break: normal;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		word-break: normal;
+		font-weight: 500;
+		line-height: 1.2;
+		color: inherit;
+	}
+	input,
+	textarea {
+		font-family: @fonts-common-suffix;
+	}
+	img{
+		max-width: 100%;
+	}
+	.article{
+		padding: 0;
+	}
+// 初始化样式 end
+

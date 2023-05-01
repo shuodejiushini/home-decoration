@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+input::-ms-clear,
+input::-ms-reveal{
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+input::-webkit-input-safebox-button{
+	display: none;
+	width: 0;
+	height: 0;
+}
+	// input
+		input.form-input,
+		.form-input input {
+			width: 250px;
+			height: 40px;
+			font-size: 20px;
+			background: #FFFFFF;
+			border: 1px solid #fff;
+			border-radius: 0;
+			padding: 9px 0 9px 18px;
+			color: #333;
+
+			&::-ms-clear {
+				display: none;
+				width: 0;
+				height: 0;
+			}
+
+			&::-webkit-input-placeholder {
+				font-family: @fonts-common-suffix;
+				font-size: 20px;
+				color: #999999;
+			}
+
+			&::-moz-placeholder {
+				font-family: @fonts-common-suffix;
+				font-size: 20px;
+				color: #999999;
+			}
+
+			&:-ms-input-placeholder {
+				font-family: @fonts-common-suffix;
+				font-size: 20px;
+				color: #999999;
+			}
+
+			&:-moz-placeholder {
+				font-family: @fonts-common-suffix;
+				font-size: 20px;
+				color: #999999;
+			}
+
+			&[disabled],
+			&.is-disabled{
+				background: #E6E6E6!important;
+				border: 1px solid #D9D9D9!important;
+				cursor: default !important;
+				color: #999!important;
+				opacity: 1;
+				-ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+				filter: alpha(opacity=100);
+				border-color: #e6e6e6!important;
+			}
+		}
+
+		input.form-input:focus,
+		.form-input input:focus,
+		input.form-input.is-focus,
+		.form-input input.is-focus,
+		.form-input.is-focus input {
+			border: 1px solid #999999 !important;
+		}
+
+
+		input.form-input.is-error,
+		.form-input input.is-error,
+		.form-input.is-error input {
+			border: 1px solid #FF6060;
+		}
+
+		input:-webkit-autofill, 
+			 textarea:-webkit-autofill, 
+			 select:-webkit-autofill { 
+			       -webkit-box-shadow: 0 0 0 1000px white inset; 
+			}
+		input[type=text]:focus, input[type=password]:focus, textarea:focus {
+		      -webkit-box-shadow: 0 0 0 1000px white inset; 
+		}
+		input[type=search]::-webkit-search-cancel-button{
+		    -webkit-appearance: none;
+		}
+
+
+		input::-ms-clear{
+		  display: none;
+		  width : 0;
+  		  height: 0;
+		}
+		
+		/* 火狐兼容 */
+		@-moz-document url-prefix(){input.form-input, .form-input input{padding:5px 0 5px 10px;}}
+
+		/* ie兼容 */
+		@media screen and(-ms-high-contrast:active),(-ms-high-contrast:none) {
+		    input.form-input, .form-input input{padding:0 6px;}
+		} 
+
+	// input end
+
+	// 报错信息
+		.msg-block{
+			display: none;
+			font-size: 0;
+			margin-top: 5px;
+			span{
+				display: inline-block;
+				font-family: @fonts-common-suffix;
+				font-size: 12px;
+				color: #FF6060;
+			}
+		}
+		.is-error{
+			.msg-block{
+				text-align: left;
+				display: block;
+			}
+		}
+	// 报错信息 end
+
+// form-group end
+
+input[type=number] {  
+    -moz-appearance:textfield;  
+}
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button {  
+    -webkit-appearance: none;
+}
+
+.form-input textarea,.form-textarea textarea{
+	padding: 10px;
+	font-size: 12px;
+	border-radius: 0;
+	&:focus{
+		border: 1px solid #999999 !important;
+	}
+}
+.is-error .form-input textarea {
+	border: 1px solid #FF6060;
+}
+
+@media (max-width: 1024px){}
+@media (max-width: 767px){}

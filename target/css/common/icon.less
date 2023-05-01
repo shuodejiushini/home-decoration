@@ -1,0 +1,39 @@
+@charset "utf-8";
+// 引用icon 变量和方法
+@import "../../sprites/style/sprites.less";
+.icon {
+    display: inline-block;
+    background-image: url(../images/icon.png?version=71695e4);
+}
+
+// .icon-aooter-location{
+//  .sprite(@aooter-location);
+// }
+
+
+
+
+//login end
+@media (max-width:1024px),
+screen and (-webkit-min-device-pixel-ratio:2),
+screen and (min--moz-device-pixel-ratio:2),
+screen and (-o-min-device-piratio:200/100),
+screen and (min-device-pixel-ratio:2) {
+    .icon{
+        background-image: url(../images/icon@2x.png?version=71695e4);
+    }
+
+    
+}
+
+
+@media (max-width: 1024px){
+	
+//  .icon-logo-sport{
+//      .sprite(@sports);
+//      .retina-sprite(@sports);
+//  }
+
+}
+
+@media (max-width: 767px) {}
